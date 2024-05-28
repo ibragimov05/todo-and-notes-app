@@ -4,7 +4,4 @@ A new Flutter project.
 
 ## Getting Started
 
-
-
-https://github.com/ibragimov05/todo-and-notes-app/assets/147605613/0a5641b6-6026-4f04-a451-02ed0f0c7929
-
+[Screencast from 2024-05-28 21-34-59.webm](https://github.com/ibragimov05/todo-and-notes-app/assets/147605613/bd6a378b-4f0a-41a5-b195-3c6d9edc2005)
