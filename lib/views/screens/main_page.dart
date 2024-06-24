@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_and_notes/views/screens/home_screen/home_screen.dart';
 import 'package:todo_and_notes/views/screens/note_screen/note_screen.dart';
@@ -16,24 +17,30 @@ class _MainPageState extends State<MainPage> {
     NoteScreen(),
   ];
 
-  void _onButtonTapped(int index) {
-    _currentPage = index;
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: _pages[_currentPage],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.task), label: 'ToDo'),
-          BottomNavigationBarItem(icon: Icon(Icons.note), label: 'Note'),
+      bottomNavigationBar: CurvedNavigationBar(
+        items: const [
+          Icon(
+            Icons.task,
+            color: Colors.black,
+          ),
+          Icon(
+            Icons.note,
+            color: Colors.black,
+          ),
         ],
-        currentIndex: _currentPage,
-        onTap: _onButtonTapped,
+        // color: Colors.white,
+        buttonBackgroundColor: Colors.blue,
+        backgroundColor: Colors.blue,
+        onTap: (value) {
+          _currentPage = value;
+          setState(() {});
+        },
       ),
     );
   }
